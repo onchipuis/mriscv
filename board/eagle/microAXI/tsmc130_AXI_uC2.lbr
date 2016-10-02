@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="7.5.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="yes"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="yes"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="yes"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="yes"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="yes"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="yes"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="yes"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="yes"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="yes"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<packages>
+<package name="CIDIC_AXI_UC_TEST_DIE">
+<smd name="VSS@1" x="0.0254" y="1.016" dx="0.3048" dy="0.1524" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="VDD@1" x="-1.3208" y="2.4638" dx="0.3048" dy="0.1524" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="SPI_AXI_SLAVE_SCLK" x="-1.3716" y="3.5052" dx="0.9144" dy="0.1524" layer="1" rot="R90"/>
+<smd name="SPI_AXI_SLAVE_DATA" x="-1.0668" y="3.5052" dx="0.9144" dy="0.1524" layer="1" rot="R90"/>
+<smd name="SPI_AXI_SLAVE_CEB" x="-0.762" y="3.5052" dx="0.9144" dy="0.1524" layer="1" rot="R90"/>
+<smd name="SPI_AXI_MASTER_DOUT" x="-0.4572" y="3.5052" dx="0.9144" dy="0.1524" layer="1" rot="R90"/>
+<smd name="VDD@2" x="-0.889" y="2.4638" dx="0.3048" dy="0.1524" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="VSS@2" x="-2.4384" y="1.2954" dx="0.3048" dy="0.1524" layer="1" rot="R270" stop="no" thermals="no" cream="no"/>
+<smd name="SPI_AXI_MASTER_SCLK" x="0.4572" y="3.5052" dx="0.9144" dy="0.1524" layer="1" rot="R90"/>
+<smd name="SPI_AXI_MASTER_DATA" x="0.762" y="3.5052" dx="0.9144" dy="0.1524" layer="1" rot="R90"/>
+<smd name="SPI_AXI_MASTER_CEB" x="1.0668" y="3.5052" dx="0.9144" dy="0.1524" layer="1" rot="R90"/>
+<smd name="AXI_CLK" x="1.3716" y="3.5052" dx="0.9144" dy="0.1524" layer="1" rot="R90"/>
+<smd name="AXI_RST" x="1.6764" y="3.5052" dx="0.9144" dy="0.1524" layer="1" rot="R90"/>
+<smd name="VSS@3" x="-2.2352" y="0.3302" dx="0.3048" dy="0.1524" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="VSS@4" x="0" y="-1.0414" dx="0.3048" dy="0.1524" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="VDD@3" x="2.4384" y="1.1938" dx="0.3048" dy="0.1524" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="VSS@5" x="-2.2606" y="-0.1524" dx="0.3048" dy="0.1524" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="H_DATA" x="3.7084" y="0.9144" dx="0.9144" dy="0.1524" layer="1" rot="R180"/>
+<smd name="H_CEB" x="3.7084" y="0.6096" dx="0.9144" dy="0.1524" layer="1" rot="R180"/>
+<smd name="H_DOUT" x="3.7084" y="0.3048" dx="0.9144" dy="0.1524" layer="1" rot="R180"/>
+<smd name="H_CLK" x="3.7084" y="0" dx="0.9144" dy="0.1524" layer="1" rot="R180"/>
+<smd name="VDD@4" x="2.4638" y="-0.508" dx="0.3048" dy="0.1524" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="VSS@6" x="-2.286" y="-0.7112" dx="0.3048" dy="0.1524" layer="1" rot="R270" stop="no" thermals="no" cream="no"/>
+<smd name="H_CLK_10" x="3.7084" y="-0.9144" dx="0.9144" dy="0.1524" layer="1" rot="R180"/>
+<smd name="H_RST" x="3.7084" y="-1.2192" dx="0.9144" dy="0.1524" layer="1" rot="R180"/>
+<smd name="VDD@5" x="2.4384" y="-1.0922" dx="0.3048" dy="0.1524" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="VSS@7" x="-2.286" y="-1.3208" dx="0.3048" dy="0.1524" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="H_CLK_200" x="2.159" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="AVSS@1" x="1.8288" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="AVDD@1" x="1.4986" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="DAC_AXI_OUT" x="1.1684" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="AVSS@2" x="0.8382" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="VREF_DAC" x="0.508" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="AVSS@3" x="0.1778" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="VREF_ADC" x="-0.1778" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="ADC_AXI_IP" x="-0.508" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="AVSS@4" x="-0.8382" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="ADC_AXI_IN" x="-1.1684" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="AVDD@2" x="-1.4986" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="ADC_AXI_CLK" x="-1.8288" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="ADC_AXI_RST" x="-2.159" y="-4.1148" dx="0.9144" dy="0.1524" layer="1" rot="R270"/>
+<smd name="N$10000" x="-3.4036" y="-1.8288" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="VDDPOC" x="-3.4036" y="-1.524" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="GPIO07_PAD" x="-3.4036" y="-1.2192" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="GPIO06_PAD" x="-3.4036" y="-0.9144" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="GPIO05_PAD" x="-3.4036" y="-0.6096" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="GPIO04_PAD" x="-3.4036" y="-0.3048" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="GPIO03_PAD" x="-3.4036" y="0" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="GPIO02_PAD" x="-3.4036" y="0.3048" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="GPIO01_PAD" x="-3.4036" y="0.6096" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="GPIO00_PAD" x="-3.4036" y="0.9144" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="VSSPST@2" x="-3.4036" y="1.2192" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="VDDPST" x="-3.4036" y="1.524" dx="0.9144" dy="0.1524" layer="1"/>
+<smd name="VSS@8" x="-2.2098" y="0.7366" dx="0.3048" dy="0.1524" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<wire x1="-1.1176" y1="-1.3208" x2="-1.1176" y2="-1.6256" width="0.1524" layer="1"/>
+<wire x1="-1.1176" y1="-1.6256" x2="-0.8128" y2="-1.6256" width="0.1524" layer="1"/>
+<wire x1="0.8128" y1="-1.6256" x2="1.1176" y2="-1.6256" width="0.1524" layer="1"/>
+<wire x1="1.1176" y1="-1.6256" x2="1.1176" y2="-1.3208" width="0.1524" layer="1"/>
+<wire x1="-1.1176" y1="0.7112" x2="-1.1176" y2="1.016" width="0.1524" layer="1"/>
+<wire x1="-1.1176" y1="1.016" x2="-0.8128" y2="1.016" width="0.1524" layer="1"/>
+<wire x1="1.1176" y1="0.7112" x2="1.1176" y2="1.016" width="0.1524" layer="1"/>
+<wire x1="1.1176" y1="1.016" x2="0.8128" y2="1.016" width="0.1524" layer="1"/>
+<wire x1="1.8288" y1="1.6764" x2="-1.6764" y2="1.6764" width="0.254" layer="1"/>
+<rectangle x1="3.2512" y1="-0.6858" x2="4.1656" y2="-0.5334" layer="1"/>
+<rectangle x1="3.0988" y1="-0.6858" x2="4.0132" y2="-0.5334" layer="29"/>
+<rectangle x1="2.9972" y1="-0.7874" x2="4.1148" y2="-0.4318" layer="29"/>
+<rectangle x1="3.2512" y1="-0.381" x2="4.1656" y2="-0.2286" layer="1"/>
+<rectangle x1="3.0988" y1="-0.381" x2="4.0132" y2="-0.2286" layer="29"/>
+<rectangle x1="2.9972" y1="-0.4826" x2="4.1148" y2="-0.127" layer="29"/>
+<rectangle x1="3.2512" y1="-1.6002" x2="4.1656" y2="-1.4478" layer="1"/>
+<rectangle x1="3.0988" y1="-1.6002" x2="4.0132" y2="-1.4478" layer="29"/>
+<rectangle x1="2.9972" y1="-1.7018" x2="4.1148" y2="-1.3462" layer="29"/>
+<rectangle x1="3.2512" y1="-1.905" x2="4.1656" y2="-1.7526" layer="1"/>
+<rectangle x1="3.0988" y1="-1.905" x2="4.0132" y2="-1.7526" layer="29"/>
+<rectangle x1="2.9972" y1="-2.0066" x2="4.1148" y2="-1.651" layer="29"/>
+<rectangle x1="3.2512" y1="1.143" x2="4.1656" y2="1.2954" layer="1"/>
+<rectangle x1="3.0988" y1="1.143" x2="4.0132" y2="1.2954" layer="29"/>
+<rectangle x1="2.9972" y1="1.0414" x2="4.1148" y2="1.397" layer="29"/>
+<rectangle x1="3.2512" y1="1.7526" x2="4.1656" y2="1.905" layer="1"/>
+<rectangle x1="3.0988" y1="1.7526" x2="4.0132" y2="1.905" layer="29"/>
+<rectangle x1="2.9972" y1="1.651" x2="4.1148" y2="2.0066" layer="29"/>
+<rectangle x1="3.2512" y1="1.4478" x2="4.1656" y2="1.6002" layer="1"/>
+<rectangle x1="3.0988" y1="1.4478" x2="4.0132" y2="1.6002" layer="29"/>
+<rectangle x1="2.9972" y1="1.3462" x2="4.1148" y2="1.7018" layer="29"/>
+<rectangle x1="-0.6096" y1="3.429" x2="0.3048" y2="3.5814" layer="1" rot="R90"/>
+<rectangle x1="-0.6096" y1="3.429" x2="0.3048" y2="3.5814" layer="29" rot="R90"/>
+<rectangle x1="-0.7112" y1="3.3274" x2="0.4064" y2="3.683" layer="29" rot="R90"/>
+<rectangle x1="-0.3048" y1="3.429" x2="0.6096" y2="3.5814" layer="1" rot="R90"/>
+<rectangle x1="-0.3048" y1="3.429" x2="0.6096" y2="3.5814" layer="29" rot="R90"/>
+<rectangle x1="-0.4064" y1="3.3274" x2="0.7112" y2="3.683" layer="29" rot="R90"/>
+<rectangle x1="-2.4384" y1="3.429" x2="-1.524" y2="3.5814" layer="1" rot="R90"/>
+<rectangle x1="-2.4384" y1="3.429" x2="-1.524" y2="3.5814" layer="29" rot="R90"/>
+<rectangle x1="-2.54" y1="3.3274" x2="-1.4224" y2="3.683" layer="29" rot="R90"/>
+<rectangle x1="-2.1336" y1="3.429" x2="-1.2192" y2="3.5814" layer="1" rot="R90"/>
+<rectangle x1="-2.1336" y1="3.429" x2="-1.2192" y2="3.5814" layer="29" rot="R90"/>
+<rectangle x1="-2.2352" y1="3.3274" x2="-1.1176" y2="3.683" layer="29" rot="R90"/>
+<rectangle x1="1.524" y1="3.429" x2="2.4384" y2="3.5814" layer="1" rot="R90"/>
+<rectangle x1="1.524" y1="3.429" x2="2.4384" y2="3.5814" layer="29" rot="R90"/>
+<rectangle x1="1.4224" y1="3.3274" x2="2.54" y2="3.683" layer="29" rot="R90"/>
+<rectangle x1="-3.8608" y1="1.7526" x2="-2.9464" y2="1.905" layer="1"/>
+<rectangle x1="-3.8608" y1="1.7526" x2="-2.9464" y2="1.905" layer="29"/>
+<rectangle x1="-3.9624" y1="1.651" x2="-2.8448" y2="2.0066" layer="29"/>
+<rectangle x1="-2.7178" y1="-2.413" x2="-1.524" y2="1.8034" layer="29"/>
+<rectangle x1="-1.6256" y1="-1.0668" x2="1.6256" y2="0.4572" layer="29"/>
+<wire x1="1.8288" y1="-2.286" x2="1.8288" y2="1.6764" width="0.254" layer="1"/>
+<rectangle x1="-0.508" y1="-2.2606" x2="0.508" y2="1.651" layer="29"/>
+<rectangle x1="-0.889" y1="-1.397" x2="0.889" y2="0.7874" layer="1"/>
+<wire x1="-0.889" y1="1.4478" x2="1.4986" y2="1.4478" width="0.4064" layer="1"/>
+<polygon width="0.127" layer="1">
+<vertex x="-2.6416" y="-2.667"/>
+<vertex x="1.7272" y="-2.667"/>
+<vertex x="2.4892" y="-3.429"/>
+<vertex x="-2.6416" y="-3.429"/>
+</polygon>
+<polygon width="0.127" layer="1">
+<vertex x="-1.7526" y="2.8194"/>
+<vertex x="2.4384" y="2.8194" curve="-90"/>
+<vertex x="2.9718" y="2.4384"/>
+<vertex x="2.9718" y="-2.3368"/>
+<vertex x="2.2098" y="-1.651"/>
+<vertex x="2.2098" y="2.0574"/>
+<vertex x="-1.397" y="2.0574"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="-1.7526" y="2.8194"/>
+<vertex x="2.4384" y="2.8194" curve="-90"/>
+<vertex x="2.8194" y="2.4384"/>
+<vertex x="2.8194" y="-2.3368"/>
+<vertex x="2.0574" y="-1.651"/>
+<vertex x="2.0574" y="2.0574"/>
+<vertex x="-1.397" y="2.0574"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="-2.6416" y="-2.667"/>
+<vertex x="1.7272" y="-2.667"/>
+<vertex x="2.4892" y="-3.429"/>
+<vertex x="-2.6416" y="-3.429"/>
+</polygon>
+<rectangle x1="-0.889" y1="-1.397" x2="0.889" y2="0.7874" layer="29"/>
+<rectangle x1="-0.508" y1="-2.2606" x2="0.508" y2="1.651" layer="1"/>
+<rectangle x1="-1.6256" y1="-1.0668" x2="1.6256" y2="0.4572" layer="1"/>
+<wire x1="-1.524" y1="0.9652" x2="-1.524" y2="-0.0254" width="0.3048" layer="1"/>
+<wire x1="-1.4986" y1="-0.4572" x2="-1.4986" y2="-2.0574" width="0.3048" layer="1"/>
+<wire x1="-1.4986" y1="-2.0574" x2="-0.4826" y2="-2.0574" width="0.4064" layer="1"/>
+<wire x1="0.381" y1="-2.0574" x2="1.397" y2="-2.0574" width="0.4064" layer="1"/>
+<wire x1="1.4986" y1="-0.4318" x2="1.4986" y2="-2.0574" width="0.3048" layer="1"/>
+<wire x1="1.4986" y1="1.4478" x2="1.4986" y2="0.4826" width="0.3048" layer="1"/>
+<wire x1="-1.6764" y1="-2.286" x2="1.8288" y2="-2.286" width="0.254" layer="1"/>
+<rectangle x1="-2.7178" y1="-2.413" x2="-1.524" y2="1.8034" layer="1"/>
+<wire x1="1.6764" y1="1.5494" x2="1.6764" y2="-2.1336" width="0.3048" layer="1"/>
+<smd name="VSSPST@3" x="-2.0574" y="-2.159" dx="0.9144" dy="0.1524" layer="1"/>
+<wire x1="-1.6764" y1="-2.286" x2="1.6764" y2="-2.286" width="0.254" layer="29"/>
+<rectangle x1="3.0988" y1="-0.6858" x2="4.0132" y2="-0.5334" layer="29"/>
+<rectangle x1="3.0988" y1="-0.381" x2="4.0132" y2="-0.2286" layer="29"/>
+<rectangle x1="3.0988" y1="-1.6002" x2="4.0132" y2="-1.4478" layer="29"/>
+<rectangle x1="3.0988" y1="-1.905" x2="4.0132" y2="-1.7526" layer="29"/>
+<rectangle x1="3.0988" y1="1.143" x2="4.0132" y2="1.2954" layer="29"/>
+<rectangle x1="3.0988" y1="1.7526" x2="4.0132" y2="1.905" layer="29"/>
+<rectangle x1="3.0988" y1="1.4478" x2="4.0132" y2="1.6002" layer="29"/>
+<rectangle x1="-0.6096" y1="3.429" x2="0.3048" y2="3.5814" layer="29" rot="R90"/>
+<rectangle x1="-0.3048" y1="3.429" x2="0.6096" y2="3.5814" layer="29" rot="R90"/>
+<rectangle x1="-2.4384" y1="3.429" x2="-1.524" y2="3.5814" layer="29" rot="R90"/>
+<rectangle x1="-2.1336" y1="3.429" x2="-1.2192" y2="3.5814" layer="29" rot="R90"/>
+<rectangle x1="1.524" y1="3.429" x2="2.4384" y2="3.5814" layer="29" rot="R90"/>
+<rectangle x1="-3.8608" y1="1.7526" x2="-2.9464" y2="1.905" layer="29"/>
+<rectangle x1="-2.7178" y1="-2.413" x2="-1.524" y2="1.8034" layer="29"/>
+<rectangle x1="-1.6256" y1="-1.0668" x2="1.6256" y2="0.4572" layer="29"/>
+<rectangle x1="-0.508" y1="-2.2606" x2="0.508" y2="1.651" layer="29"/>
+<wire x1="1.4986" y1="1.4478" x2="1.4986" y2="0.4826" width="0.3048" layer="29"/>
+<wire x1="0.381" y1="-2.0574" x2="1.397" y2="-2.0574" width="0.4064" layer="29"/>
+<wire x1="1.4986" y1="-0.4318" x2="1.4986" y2="-2.0574" width="0.3048" layer="29"/>
+<wire x1="-1.4986" y1="-0.4572" x2="-1.4986" y2="-2.032" width="0.3048" layer="29"/>
+<wire x1="-1.4986" y1="-2.032" x2="-0.4826" y2="-2.032" width="0.3556" layer="29"/>
+<wire x1="-0.889" y1="1.4478" x2="0.1016" y2="1.4478" width="0.4064" layer="29"/>
+<wire x1="-1.524" y1="0.9652" x2="-1.524" y2="-0.0254" width="0.3048" layer="29"/>
+<polygon width="0.127" layer="29">
+<vertex x="-1.7526" y="2.8194"/>
+<vertex x="2.4384" y="2.8194" curve="-90"/>
+<vertex x="2.8194" y="2.4384"/>
+<vertex x="2.8194" y="-2.3368"/>
+<vertex x="2.0574" y="-1.651"/>
+<vertex x="2.0574" y="2.0574"/>
+<vertex x="-1.397" y="2.0574"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="-2.6416" y="-2.667"/>
+<vertex x="1.7272" y="-2.667"/>
+<vertex x="2.4892" y="-3.429"/>
+<vertex x="-2.6416" y="-3.429"/>
+</polygon>
+<rectangle x1="-0.889" y1="-1.397" x2="0.889" y2="0.7874" layer="29"/>
+<wire x1="0.3302" y1="1.4478" x2="1.4986" y2="1.4478" width="0.4064" layer="29"/>
+<wire x1="1.6764" y1="1.6764" x2="-1.6764" y2="1.6764" width="0.254" layer="29"/>
+<wire x1="1.6764" y1="-2.286" x2="1.6764" y2="1.6764" width="0.254" layer="29"/>
+<wire x1="-1.1176" y1="0.7112" x2="-1.1176" y2="1.016" width="0.1524" layer="29"/>
+<wire x1="-1.1176" y1="1.016" x2="-0.8128" y2="1.016" width="0.1524" layer="29"/>
+<wire x1="1.1176" y1="1.016" x2="0.8128" y2="1.016" width="0.1524" layer="29"/>
+<wire x1="1.1176" y1="0.7112" x2="1.1176" y2="1.016" width="0.1524" layer="29"/>
+<wire x1="1.1176" y1="-1.6256" x2="1.1176" y2="-1.3208" width="0.1524" layer="29"/>
+<wire x1="0.8128" y1="-1.6256" x2="1.1176" y2="-1.6256" width="0.1524" layer="29"/>
+<wire x1="-1.1176" y1="-1.6256" x2="-0.8128" y2="-1.6256" width="0.1524" layer="29"/>
+<wire x1="-1.1176" y1="-1.3208" x2="-1.1176" y2="-1.6256" width="0.1524" layer="29"/>
+</package>
+</packages>
+<symbols>
+<symbol name="CIDIC_AXI_UC_TEST_DIE">
+<pin name="VSS@1" x="22.86" y="33.02" length="middle" rot="R180"/>
+<pin name="VDD@1" x="22.86" y="30.48" length="middle" rot="R180"/>
+<pin name="SPI_AXI_SLAVE_SCLK" x="22.86" y="27.94" length="middle" rot="R180"/>
+<pin name="SPI_AXI_SLAVE_DATA" x="22.86" y="25.4" length="middle" rot="R180"/>
+<pin name="SPI_AXI_SLAVE_CEB" x="22.86" y="22.86" length="middle" rot="R180"/>
+<pin name="SPI_AXI_MASTER_DOUT" x="22.86" y="20.32" length="middle" rot="R180"/>
+<pin name="VDD@2" x="22.86" y="17.78" length="middle" rot="R180"/>
+<pin name="VSS@2" x="22.86" y="15.24" length="middle" rot="R180"/>
+<pin name="SPI_AXI_MASTER_SCLK" x="22.86" y="12.7" length="middle" rot="R180"/>
+<pin name="SPI_AXI_MASTER_DATA" x="22.86" y="10.16" length="middle" rot="R180"/>
+<pin name="SPI_AXI_MASTER_CEB" x="22.86" y="7.62" length="middle" rot="R180"/>
+<pin name="AXI_CLK" x="22.86" y="5.08" length="middle" rot="R180"/>
+<pin name="AXI_RST" x="22.86" y="2.54" length="middle" rot="R180"/>
+<pin name="VSS@3" x="22.86" y="0" length="middle" rot="R180"/>
+<pin name="VSS@4" x="22.86" y="-5.08" length="middle" rot="R180"/>
+<pin name="VDD@3" x="22.86" y="-7.62" length="middle" rot="R180"/>
+<pin name="VSS@5" x="22.86" y="-10.16" length="middle" rot="R180"/>
+<pin name="H_DATA" x="22.86" y="-12.7" length="middle" rot="R180"/>
+<pin name="H_CEB" x="22.86" y="-15.24" length="middle" rot="R180"/>
+<pin name="H_DOUT" x="22.86" y="-17.78" length="middle" rot="R180"/>
+<pin name="H_CLK" x="22.86" y="-20.32" length="middle" rot="R180"/>
+<pin name="VDD@4" x="22.86" y="-22.86" length="middle" rot="R180"/>
+<pin name="VSS@6" x="22.86" y="-25.4" length="middle" rot="R180"/>
+<pin name="H_CLK_10" x="22.86" y="-27.94" length="middle" rot="R180"/>
+<pin name="H_RST" x="22.86" y="-30.48" length="middle" rot="R180"/>
+<pin name="VDD@5" x="22.86" y="-33.02" length="middle" rot="R180"/>
+<pin name="VSS@7" x="22.86" y="-35.56" length="middle" rot="R180"/>
+<pin name="H_CLK_200" x="-22.86" y="-35.56" length="middle"/>
+<pin name="AVSS@1" x="-22.86" y="-33.02" length="middle"/>
+<pin name="AVDD@1" x="-22.86" y="-30.48" length="middle"/>
+<pin name="DAC_AXI_OUT" x="-22.86" y="-27.94" length="middle"/>
+<pin name="AVSS@2" x="-22.86" y="-25.4" length="middle"/>
+<pin name="VREF_DAC" x="-22.86" y="-22.86" length="middle"/>
+<pin name="AVSS@3" x="-22.86" y="-20.32" length="middle"/>
+<pin name="VREF_ADC" x="-22.86" y="-17.78" length="middle"/>
+<pin name="ADC_AXI_IP" x="-22.86" y="-15.24" length="middle"/>
+<pin name="AVSS@4" x="-22.86" y="-12.7" length="middle"/>
+<pin name="ADC_AXI_IN" x="-22.86" y="-10.16" length="middle"/>
+<pin name="AVDD@2" x="-22.86" y="-7.62" length="middle"/>
+<pin name="ADC_AXI_CLK" x="-22.86" y="-5.08" length="middle"/>
+<pin name="ADC_AXI_RST" x="-22.86" y="-2.54" length="middle"/>
+<pin name="VSSPST@1" x="-22.86" y="2.54" length="middle"/>
+<pin name="VDDPOC" x="-22.86" y="5.08" length="middle"/>
+<pin name="GPIO07_PAD" x="-22.86" y="7.62" length="middle"/>
+<pin name="GPIO06_PAD" x="-22.86" y="10.16" length="middle"/>
+<pin name="GPIO05_PAD" x="-22.86" y="12.7" length="middle"/>
+<pin name="GPIO04_PAD" x="-22.86" y="15.24" length="middle"/>
+<pin name="GPIO03_PAD" x="-22.86" y="17.78" length="middle"/>
+<pin name="GPIO02_PAD" x="-22.86" y="20.32" length="middle"/>
+<pin name="GPIO01_PAD" x="-22.86" y="22.86" length="middle"/>
+<pin name="GPIO00_PAD" x="-22.86" y="25.4" length="middle"/>
+<pin name="VSSPST@2" x="-22.86" y="27.94" length="middle"/>
+<pin name="VDDPST" x="-22.86" y="30.48" length="middle"/>
+<pin name="VSS@8" x="-22.86" y="33.02" length="middle"/>
+<wire x1="-17.78" y1="38.1" x2="17.78" y2="38.1" width="0.254" layer="94"/>
+<wire x1="17.78" y1="38.1" x2="17.78" y2="-40.64" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-40.64" x2="-17.78" y2="-40.64" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-40.64" x2="-17.78" y2="38.1" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="CIDIC_AXI_UC_TEST_DIE">
+<gates>
+<gate name="G$1" symbol="CIDIC_AXI_UC_TEST_DIE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CIDIC_AXI_UC_TEST_DIE">
+<connects>
+<connect gate="G$1" pin="ADC_AXI_CLK" pad="ADC_AXI_CLK"/>
+<connect gate="G$1" pin="ADC_AXI_IN" pad="ADC_AXI_IN"/>
+<connect gate="G$1" pin="ADC_AXI_IP" pad="ADC_AXI_IP"/>
+<connect gate="G$1" pin="ADC_AXI_RST" pad="ADC_AXI_RST"/>
+<connect gate="G$1" pin="AVDD@1" pad="AVDD@1"/>
+<connect gate="G$1" pin="AVDD@2" pad="AVDD@2"/>
+<connect gate="G$1" pin="AVSS@1" pad="AVSS@1"/>
+<connect gate="G$1" pin="AVSS@2" pad="AVSS@2"/>
+<connect gate="G$1" pin="AVSS@3" pad="AVSS@3"/>
+<connect gate="G$1" pin="AVSS@4" pad="AVSS@4"/>
+<connect gate="G$1" pin="AXI_CLK" pad="AXI_CLK"/>
+<connect gate="G$1" pin="AXI_RST" pad="AXI_RST"/>
+<connect gate="G$1" pin="DAC_AXI_OUT" pad="DAC_AXI_OUT"/>
+<connect gate="G$1" pin="GPIO00_PAD" pad="GPIO00_PAD"/>
+<connect gate="G$1" pin="GPIO01_PAD" pad="GPIO01_PAD"/>
+<connect gate="G$1" pin="GPIO02_PAD" pad="GPIO02_PAD"/>
+<connect gate="G$1" pin="GPIO03_PAD" pad="GPIO03_PAD"/>
+<connect gate="G$1" pin="GPIO04_PAD" pad="GPIO04_PAD"/>
+<connect gate="G$1" pin="GPIO05_PAD" pad="GPIO05_PAD"/>
+<connect gate="G$1" pin="GPIO06_PAD" pad="GPIO06_PAD"/>
+<connect gate="G$1" pin="GPIO07_PAD" pad="GPIO07_PAD"/>
+<connect gate="G$1" pin="H_CEB" pad="H_CEB"/>
+<connect gate="G$1" pin="H_CLK" pad="H_CLK"/>
+<connect gate="G$1" pin="H_CLK_10" pad="H_CLK_10"/>
+<connect gate="G$1" pin="H_CLK_200" pad="H_CLK_200"/>
+<connect gate="G$1" pin="H_DATA" pad="H_DATA"/>
+<connect gate="G$1" pin="H_DOUT" pad="H_DOUT"/>
+<connect gate="G$1" pin="H_RST" pad="H_RST"/>
+<connect gate="G$1" pin="SPI_AXI_MASTER_CEB" pad="SPI_AXI_MASTER_CEB"/>
+<connect gate="G$1" pin="SPI_AXI_MASTER_DATA" pad="SPI_AXI_MASTER_DATA"/>
+<connect gate="G$1" pin="SPI_AXI_MASTER_DOUT" pad="SPI_AXI_MASTER_DOUT"/>
+<connect gate="G$1" pin="SPI_AXI_MASTER_SCLK" pad="SPI_AXI_MASTER_SCLK"/>
+<connect gate="G$1" pin="SPI_AXI_SLAVE_CEB" pad="SPI_AXI_SLAVE_CEB"/>
+<connect gate="G$1" pin="SPI_AXI_SLAVE_DATA" pad="SPI_AXI_SLAVE_DATA"/>
+<connect gate="G$1" pin="SPI_AXI_SLAVE_SCLK" pad="SPI_AXI_SLAVE_SCLK"/>
+<connect gate="G$1" pin="VDD@1" pad="VDD@1"/>
+<connect gate="G$1" pin="VDD@2" pad="VDD@2"/>
+<connect gate="G$1" pin="VDD@3" pad="VDD@3"/>
+<connect gate="G$1" pin="VDD@4" pad="VDD@4"/>
+<connect gate="G$1" pin="VDD@5" pad="VDD@5"/>
+<connect gate="G$1" pin="VDDPOC" pad="VDDPOC"/>
+<connect gate="G$1" pin="VDDPST" pad="VDDPST"/>
+<connect gate="G$1" pin="VREF_ADC" pad="VREF_ADC"/>
+<connect gate="G$1" pin="VREF_DAC" pad="VREF_DAC"/>
+<connect gate="G$1" pin="VSS@1" pad="VSS@1"/>
+<connect gate="G$1" pin="VSS@2" pad="VSS@2"/>
+<connect gate="G$1" pin="VSS@3" pad="VSS@3"/>
+<connect gate="G$1" pin="VSS@4" pad="VSS@4"/>
+<connect gate="G$1" pin="VSS@5" pad="VSS@5"/>
+<connect gate="G$1" pin="VSS@6" pad="VSS@6"/>
+<connect gate="G$1" pin="VSS@7" pad="VSS@7"/>
+<connect gate="G$1" pin="VSS@8" pad="VSS@8"/>
+<connect gate="G$1" pin="VSSPST@1" pad="N$10000"/>
+<connect gate="G$1" pin="VSSPST@2" pad="VSSPST@2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>
