@@ -34,6 +34,9 @@ The Microcontroller
 
 The microcontroller is composed by a 32b RISC-V core, a 4KB SRAM, a 10b ADC, a 12b DAC, 8 GPIO, and two SPI interfaces (master and slave). All the modules are conneted using two differente buses: AXI4 and APB.
 
+![./mriscv.jpg](./mriscv.jpg)
+
+
 The directory tree is:
 
 mriscv/mriscv_axi/ADC_interface_AXI     -----> ADC interface with the AXI4 bus
@@ -51,6 +54,11 @@ mriscv/mriscv_axi/spi_axi_master        -----> master SPI used for programming
 mriscv/mriscv_axi/spi_axi_slave         -----> slave SPI used for data adquisition
 
 
-Also, there are a PCB design for the development board
+Development Board
+-----------------
+
+Also, there are a PCB design for the development board, including circuits for sensing analog signals and the capability to use  external clocks. The design is in mriscv/board
+
+
 
 
