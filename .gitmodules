@@ -1,0 +1,3 @@
+[submodule "mriscvcore"]
+	path = mriscvcore
+	url = https://gitlab.com/rojasmilo/Pipeline_mRISCVcore.git
