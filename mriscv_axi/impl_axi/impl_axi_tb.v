@@ -122,7 +122,7 @@ integer i, j, error, l;
 	
 	// Memory to write
 	reg [31:0] memory [0:1023];
-	initial $readmemh("firmware/firmware.hex", memory);
+	initial $readmemh("firmware.hex", memory);
 
 	initial begin
 		//$sdf_annotate("spi_axi_master.sdf",inst_spi_axi_master);
@@ -423,11 +423,11 @@ integer i, j, error, l;
 			cap <= {cap[sword-2:0], spi_axi_slave_DATA};
 		end else if(stats == 1'b1) begin
 			stats <= 1'b0;
-			if(cap == 79 || (cap == 75 && is_o == 1'b1))
+			if(cap == 68 || (cap == 79 && is_o == 1'b1) || (cap == 78 && is_o == 1'b1) || (cap == 69 && is_o == 1'b1))
 				is_o <= 1'b1;
 			else
 				is_o <= 1'b0;
-			if(cap == 75 && is_o == 1'b1)
+			if(cap == 69 && is_o == 1'b1)
 				is_ok <= 1'b1;
 `ifdef VERBOSE
 			if (32 <= cap && cap < 128)
@@ -472,7 +472,7 @@ integer i, j, error, l;
 				waiting = waiting + 1;
 				if(waiting >= max_wait) begin
 					waiting_ok = 1'b1;
-					$display("TIMEOUT!, PLEASE DO NOT FORGET TO PUT 'OK' ON THE FIRMWARE");
+					$display("TIMEOUT!, PLEASE DO NOT FORGET TO PUT 'DONE' ON THE FIRMWARE");
 					$finish;
 				end
 				xorshift64_next;

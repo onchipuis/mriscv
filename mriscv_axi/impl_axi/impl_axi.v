@@ -181,44 +181,36 @@ module impl_axi(
 		.s_axi_rdata(s_axi_rdata)
 	); 
 	
-	// Master 1, picorv32_axi
-	// For clifford, the memory increases in 4 bytes for address
+	// Master 1, processor
+	// For everyone in this vast processor world, address increments in 4-terms
 	// For us, only increment one
 	// This is a fix for this issue (as expresed on the testbench)
-	wire [31:0] picorv_awaddr; assign m_axi_awaddr_o[0] = {2'b00, picorv_awaddr[31:2]};
-	wire [31:0] picorv_araddr; assign m_axi_araddr_o[0] = {2'b00, picorv_araddr[31:2]};
-	picorv32_axi inst_picorv32_axi
-	(
-		.clk(CLK), 
-		.resetn(PICORV_RST), 
-		//.trap(DUMMY),
-		.mem_axi_awvalid(m_axi_awvalid[0]),
-		.mem_axi_awready(m_axi_awready[0]),
-		.mem_axi_awaddr(picorv_awaddr),
-		.mem_axi_awprot(m_axi_awprot_o[0]),
-		.mem_axi_wvalid(m_axi_wvalid[0]),
-		.mem_axi_wready(m_axi_wready[0]),
-		.mem_axi_wdata(m_axi_wdata_o[0]),
-		.mem_axi_wstrb(m_axi_wstrb_o[0]),
-		.mem_axi_bvalid(m_axi_bvalid[0]),
-		.mem_axi_bready(m_axi_bready[0]),
-		.mem_axi_arvalid(m_axi_arvalid[0]),
-		.mem_axi_arready(m_axi_arready[0]),
-		.mem_axi_araddr(picorv_araddr),
-		.mem_axi_arprot(m_axi_arprot_o[0]),
-		.mem_axi_rvalid(m_axi_rvalid[0]),
-		.mem_axi_rready(m_axi_rready[0]),
-		.mem_axi_rdata(m_axi_rdata_o[0])
-		//.pcpi_valid(DUMMY),
-		//.pcpi_insn(DUMMY),
-		//.pcpi_rs1(DUMMY),
-		//.pcpi_rs2(DUMMY),
-		//.pcpi_wr(DUMMY),
-		//.pcpi_rd(DUMMY),
-		//.pcpi_wait(DUMMY),
-		//.pcpi_ready(DUMMY),
-		//.irq(DUMMY),
-		//.eoi(DUMMY)
+	// This is a little workaround for the RAM
+	wire [31:0] mriscvcore_awaddr; assign m_axi_awaddr_o[0] = {2'b00, mriscvcore_awaddr[31:2]};
+	wire [31:0] mriscvcore_araddr; assign m_axi_araddr_o[0] = {2'b00, mriscvcore_araddr[31:2]};
+	mriscvcore mriscvcore_inst (
+		.clk    (CLK            ),
+		.rstn   (PICORV_RST         ),
+		//.trap   (trap           ),
+		.AWvalid(m_axi_awvalid[0]),
+		.AWready(m_axi_awready[0]),
+		.AWdata (mriscvcore_awaddr),
+		.AWprot (m_axi_awprot_o[0]),
+		.Wvalid (m_axi_wvalid[0]),
+		.Wready (m_axi_wready[0]),
+		.Wdata  (m_axi_wdata_o[0]),
+		.Wstrb  (m_axi_wstrb_o[0]),
+		.Bvalid (m_axi_bvalid[0]),
+		.Bready (m_axi_bready[0]),
+		.ARvalid(m_axi_arvalid[0]),
+		.ARready(m_axi_arready[0]),
+		.ARdata (mriscvcore_araddr),
+		.ARprot (m_axi_arprot_o[0]),
+		.Rvalid (m_axi_rvalid[0]),
+		.RReady (m_axi_rready[0]),
+		.Rdata  (m_axi_rdata_o[0]),
+		//.outirr (irq            ),
+		.inirr  (32'd0          )
 	);
 	
 	// Master 2, spi_axi_master
