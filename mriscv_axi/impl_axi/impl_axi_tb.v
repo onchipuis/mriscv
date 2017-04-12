@@ -193,6 +193,7 @@ integer i, j, error, l;
 			end
 			$display ("SPI: Written data %x = %x", i, memory[i]);
 			#(SPERIOD*8);
+            if(memory[i] == 32'd0) i = 1024;   // Workaround
 		end
 		
 		// SENDING PICORV RESET TO ONE
