@@ -127,7 +127,10 @@ module axi4_interconnect #
 				counter_rrequests <= counter_rrequests;	// NOTHING 
 			end else
 			begin
-				counter_rrequests <= counter_rrequests+1;						// SHIFTING
+				if(counter_rrequests < masters)
+					counter_rrequests <= counter_rrequests+1;						// SHIFTING
+				else
+					counter_rrequests <= 0;
 			end
 		end
 	end
@@ -144,7 +147,10 @@ module axi4_interconnect #
 				counter_wrequests <= counter_wrequests;	// NOTHING 
 			end else
 			begin
-				counter_wrequests <= counter_wrequests+1;						// SHIFTING
+				if(counter_wrequests < masters)
+					counter_wrequests <= counter_wrequests+1;						// SHIFTING
+				else
+					counter_wrequests <= 0;					// SHIFTING
 			end
 		end
 	end
