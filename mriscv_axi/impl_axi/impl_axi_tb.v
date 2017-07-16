@@ -122,7 +122,7 @@ integer i, j, error, l;
 	
 	// Memory to write
 	reg [31:0] memory [0:1023];
-	initial $readmemh("firmware.hex", memory);
+	initial $readmemh("firmware_mini.hex", memory);
 
 	initial begin
 		//$sdf_annotate("spi_axi_master.sdf",inst_spi_axi_master);
@@ -193,6 +193,7 @@ integer i, j, error, l;
 			end
 			$display ("SPI: Written data %x = %x", i, memory[i]);
 			#(SPERIOD*8);
+            if(memory[i] == 32'd0) i = 1024;   // Workaround
 		end
 		
 		// SENDING PICORV RESET TO ONE
